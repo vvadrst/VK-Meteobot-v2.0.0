@@ -147,7 +147,7 @@ def upload_photos(start, end, photo_list):
     for i in range(start, end):
         try:
             
-            # Для публичной страницы
+            # Для сообщества
             upload_server_public = vk_public.method("photos.getMessagesUploadServer", {'group_id': 229873541})
             
             # Загрузка фото (используем публичную страницу)
