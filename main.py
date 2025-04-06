@@ -150,7 +150,7 @@ def upload_photos(start, end, photo_list):
             # Для сообщества
             upload_server_public = vk_public.method("photos.getMessagesUploadServer", {'group_id': 229873541})
             
-            # Загрузка фото (используем публичную страницу)
+            # Загрузка фото (используем сообщество)
             with open(f'GENERAL/map_{i}.png', 'rb') as f:
                 response = requests.post(upload_server_public['upload_url'], files={'photo': f}).json()
             
